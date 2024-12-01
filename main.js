@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 const { BrowserWindow, app } = require('electron');
-const { nextDev } = require('next/dist/cli/next-dev');
+const { nextStart } = require('next/dist/cli/next-start');
 
 async function createWindow() {
   const win = new BrowserWindow({
@@ -8,7 +8,7 @@ async function createWindow() {
     height: 600,
   });
 
-  await nextDev({
+  await nextStart({
     port: 3000,
   });
   await win.loadURL('http://localhost:3000');

@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "main.js"
+    "main.js",
+    "afterPack.js"
   ],
   "exclude": [
     "node_modules",
