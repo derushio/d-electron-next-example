@@ -2,6 +2,7 @@
   "name": "d-electron-next",
   "version": "0.1.0",
   "private": true,
+  "main": "./main.js",
   "scripts": {
     "dev": "pnpm run-p next:dev db:generate:watch db:studio",
     "build": "next build",
@@ -54,6 +55,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/uuid": "^10.0.0",
+    "electron": "^33.2.1",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.0.3",
     "eslint-config-prettier": "^9.1.0",

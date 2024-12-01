@@ -23,7 +23,13 @@
       "@prisma/generated/*": ["./prisma/generated/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "main.js"
+  ],
   "exclude": [
     "node_modules",
     "docker",
