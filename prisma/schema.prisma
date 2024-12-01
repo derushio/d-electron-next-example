@@ -10,15 +10,15 @@ generator client {
   output          = "../src/data-accesses/infra/prisma/generated"
 }
 
-generator comments {
-  // 少々クセのある動きをする
-  // generateでも生成されてしまうが、対象のテーブルが未生成の場合migrate:devに失敗するので
-  // その場合は生成されたコメントのmigrationディレクトリとcomments-latest.jsonを消去した上で再度migrate:devを実行するべき
-  provider = "prisma-db-comments-generator"
-}
+// generator comments {
+//   // 少々クセのある動きをする
+//   // generateでも生成されてしまうが、対象のテーブルが未生成の場合migrate:devに失敗するので
+//   // その場合は生成されたコメントのmigrationディレクトリとcomments-latest.jsonを消去した上で再度migrate:devを実行するべき
+//   provider = "prisma-db-comments-generator"
+// }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 

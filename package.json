@@ -26,6 +26,7 @@
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
     "@prisma/client": "^6.0.0",
+    "@prisma/migrate": "^6.0.0",
     "bcrypt": "^5.1.1",
     "date-fns": "^4.1.0",
     "flowbite-react": "^0.10.2",
@@ -73,7 +74,7 @@
     "seed": "pnpm tsx ./src/data-accesses/infra/prisma/seeds/index.ts"
   },
   "build": {
-    "asar": true,
+    "asar": false,
     "afterPack": "./afterPack.js"
   }
 }

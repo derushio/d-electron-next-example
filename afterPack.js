@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 
 async function afterPack(context) {
   const { appOutDir } = context;
-  // const outDir = `${appOutDir}/resources/app.asar.unpacked`;
+  const outDir = `${appOutDir}/resources/app.asar.unpacked`;
 
   // 必要なファイルを指定してコピー
   await fs.copy('node_modules', `${appOutDir}/node_modules`, {
@@ -22,6 +22,10 @@ async function afterPack(context) {
   await fs.copy('tailwind.config.ts', `${appOutDir}/tailwind.config.ts`);
   await fs.copy('tsconfig.json', `${appOutDir}/tsconfig.json`);
   await fs.copy('package.json', `${appOutDir}/package.json`);
+
+  // electron内でbcryptを使っていない場合は削除しなければならない
+  // await fs.remove('node_modules/bcrypt');
+  await fs.copy('node_modules', `${outDir}/node_modules`);
 }
 
 module.exports = afterPack;
