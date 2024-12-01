@@ -73,7 +73,7 @@
     "seed": "pnpm tsx ./src/data-accesses/infra/prisma/seeds/index.ts"
   },
   "build": {
-    "asar": false,
+    "asar": true,
     "afterPack": "./afterPack.js"
   }
 }

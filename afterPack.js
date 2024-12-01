@@ -10,6 +10,7 @@ async function afterPack(context) {
     overwrite: false,
   });
   await fs.copy('src', `${appOutDir}/src`);
+  await fs.copy('main.js', `${appOutDir}/main.js`);
   await fs.copy('public', `${appOutDir}/public`);
   await fs.copy('prisma', `${appOutDir}/prisma`);
   await fs.copy('.next', `${appOutDir}/.next`);
